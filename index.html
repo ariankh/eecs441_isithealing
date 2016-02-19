@@ -1,0 +1,53 @@
+<html>
+  <head>
+    <!-- jQuery. Yes you need this. -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+    
+    <!-- stylesheet -->
+    <link href="static/css/literallycanvas.css" rel="stylesheet">
+
+    <!-- dependency: React.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/react-with-addons.js"></script>
+
+    <!-- Literally Canvas -->
+    <script src="static/js/literallycanvas.js"></script>
+  </head>
+  <body>
+
+<div class="literally backgrounds"></div>
+
+<script>
+  $(document).ready(function() {
+    var backgroundImage = new Image()
+    backgroundImage.src = 'static/sample_image.png';
+
+    var lc = LC.init(
+  document.getElementsByClassName('literally backgrounds')[0],
+  {imageURLPrefix: 'static/img'},
+  {imageSize: {width: 500, height: null}}    
+    );
+  var newImage = new Image()
+  newImage.src = 'static/sample_image.png';
+  lc.saveShape(LC.createShape('Image', {x: 10, y: 10, image: newImage}));
+  }
+  );
+</script>
+
+<!-- <\!-- where the widget goes. you can do CSS to it. -\-> -->
+    <!-- <div class="literally"></div> -->
+    <!-- <\!-- kick it off -\-> -->
+    <!-- <script> -->
+    <!--     // Look ma, no jQuery! -->
+    <!--     LC.init( -->
+    <!--         document.getElementsByClassName('literally')[0], -->
+    <!--         {imageURLPrefix: 'static/img'} -->
+    <!--     ); -->
+
+    <!--     /* or if you just love jQuery, -->
+    <!--         $('.literally').literallycanvas({imageURLPrefix: '/static/img'}) -->
+    <!--         or -->
+    <!--         LC.init($('.literally').get(0), {imageURLPrefix: '/static/img'}) -->
+    <!--     */ -->
+    <!-- </script> -->
+  </body>
+</html>
