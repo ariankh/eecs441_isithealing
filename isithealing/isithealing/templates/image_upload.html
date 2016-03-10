@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+<form id="form" action="/image_edit" method="post" enctype="multipart/form-data">
+	<label id="largeFile" for="file">
+	    <input id="file" type="file" accept="image/*" capture="camera" name="newfile"></input>
+	</label>
+</form>
+
+<script type="text/javascript">
+document.getElementById("file").onchange = function() {
+    document.getElementById("form").submit();
+};
+</script>
+
+{% endblock %}

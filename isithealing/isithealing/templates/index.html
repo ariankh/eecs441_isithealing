@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block content %}
+<form action="image_upload">
+<div class="col-xs-1 col-sm-4 col-lg-5"></div>
+<div id="login-container" class="col-xs-10 col-sm-4 col-lg-2">
+		<h2 style="color: #ecf0f1">Log In</h2>
+		<input type="text" placeholder="username" class="form-control login-input"> </input>
+		<input type="password" placeholder="password" class="form-control login-input"> </input>
+		<div class="col-xs-3"></div>
+		<div class="col-xs-6">
+		<input class="form-control" type="submit" value="Go"></input>
+		</div>
+		<div class="col-xs-3 col-sm-4 col-lg-5"></div>
+</div>
+<div class="col-xs-1"></div>
+</form>
+{% endblock %}

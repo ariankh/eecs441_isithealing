@@ -1,0 +1,40 @@
+body {
+background: #3498db;
+}
+
+.login-input {
+margin-bottom: 3px;
+}
+
+#login-container {
+	margin-top: 10%;
+}
+
+
+label#largeFile:after {
+  position:absolute;
+  width:60%;
+  max-width:800px;
+  content:"Upload your file";
+  left:0;
+  right:0;
+  margin:50px auto;
+  text-align:center;
+  padding:50px 0px 50px 0px;
+  border-radius:10px;
+  border:5px dashed #ecf0f1;
+  color:#ecf0f1;
+  font-size:30px;
+}
+
+label#largeFile:hover:after {
+  background:#ecf0f1;
+  color:#3498db;
+  cursor:pointer;
+}
+
+
+label#largeFile input#file {
+    width: 0px;
+    height: 0px;
+}
